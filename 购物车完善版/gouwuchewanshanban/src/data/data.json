@@ -1,0 +1,38 @@
+{
+    "code":0,
+    "list":[
+        {
+            "id":0,
+            "title":"两杯超大杯美式",
+            "desc":"两杯超大杯美式",
+            "saleNum":9,
+            "zan":0,
+            "count":1,
+            "price":55.8,
+            "img":"1.jpg",
+            "ischecked":false
+        },
+        {
+            "id":1,
+            "title":"一杯超大杯拿铁+一杯超大杯美式",
+            "desc":"一杯超大杯拿铁+一杯超大杯美式",
+            "price":59.4,
+            "saleNum":9,
+            "zan":0,
+            "count":1,
+            "img":"2.jpg",
+            "ischecked":false
+        },{
+            "id":2,
+            "title":"摩卡可可碎片星冰乐+抹茶可可碎星冰乐（超大杯）",
+            "desc":"摩卡可可碎片星冰乐+抹茶可可碎星冰乐（超大杯）",
+            "price":73.0,
+            "saleNum":9,
+            "zan":0,
+            "count":1,
+            "img":"3.jpg",
+            "ischecked":false
+        }
+
+    ]
+}

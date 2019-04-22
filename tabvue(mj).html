@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            margin: 0;
+        }
+        header{
+            height: 44px;
+            width: 100%;
+            display: flex;
+        }
+        header>span{
+            height: 44px;
+              line-height: 44px;
+            display: inline-block;
+            flex: 1;
+            text-align: center;
+        }
+         header>span.active{
+             background: blue;
+             color: white;
+         }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <span v-for="(item,index) in list" :class="['current',{active:index==cur}]" @click="titleClick(index)">{{item.title}}</span>
+        </header>
+        <ul>
+            <li v-for="(item1,index1) in list[cur].news" :style="[{color:isColor,fontSize:'23px'},styleObject]">{{item1.newTitle}}</li>
+        </ul>
+
+    </div>
+       <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                cur:0,
+                isColor:"red",
+                styleObject:{
+                    height:'44px'
+                },
+                list:[
+                    {
+                        title:"新闻",
+                        news:[
+                            {
+                                newTitle:'李易峰太帅了啦啦啦啦啦啦1'
+                            },
+                              {
+                                newTitle:'李易峰太帅了啦啦啦啦啦啦2'
+                            },
+                              {
+                                newTitle:'李易峰太帅了啦啦啦啦啦啦3'
+                            },
+                              {
+                                newTitle:'李易峰太帅了啦啦啦啦啦啦4'
+                            }
+                        ]
+                    },
+                      {
+                        title:"推荐",
+                        news:[
+                            {
+                                newTitle:'好好学习天天向上1'
+                            },
+                              {
+                                newTitle:'好好学习天天向上2'
+                            },
+                              {
+                                newTitle:'好好学习天天向上3'
+                            },
+                              {
+                                newTitle:'好好学习天天向上4'
+                            }
+                        ]
+                    }
+                ]
+            },
+            methods:{
+                titleClick(ind){
+                    console.log(ind)
+                    this.cur=ind;
+                }
+            }
+        })
+    
+    
+    
+    </script>
+</body>
+</html>

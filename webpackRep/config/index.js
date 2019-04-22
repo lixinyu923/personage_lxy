@@ -1,0 +1,10 @@
+module.exports={
+    dev:{
+        mode:'development',//开发
+        port:9000,
+        host:'localhost'
+    },
+    prod:{
+        mode:'production',//生产
+    }
+}
